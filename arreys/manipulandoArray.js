@@ -1,0 +1,51 @@
+const numeros = [1, 5, 10 , 15, 20];
+
+///////////////////////////////////////////////////// add e remove itens do arrey /////////////////////////////////////////////////////
+// adicionando um novo valor no array
+
+// numeros.push (25); // add no final do arrey
+
+// console.log(numeros);  // [1, 5, 10, 15, 20, 25]
+
+
+
+// numeros.push ("lucas"); // posso add nomes tbm
+
+// console.log(numeros);  //  [1, 5, 10, 15, 20, 25, "lucas"]
+
+
+
+// posso remover o ultimo item do arrey com pop
+
+// numeros.pop(); // remove o ultimo item do arrey
+
+ console.log(numeros);  // [1, 5, 10, 15]
+
+
+//////////////////////////////////////////////////////// lista de comandos array /////////////////////////////////////////////////////
+/*
+
+push - add no final do arrey
+pop - remove o ultimo item do arrey
+
+shift - remove o primeiro item do arrey
+unshift - add no inicio do arrey
+
+
+*/  
+
+
+// removendo o primeiro item do arrey com shift
+
+// numeros.shift(); // remove o primeiro item do arrey 
+
+// console.log(numeros);  // [5, 10, 15, 20]      
+
+
+// add um item no inicio do arrey com unshift
+
+// numeros.unshift(2); // add no inicio do arrey
+// console.log(numeros);  // [2, 5, 10, 15, 20]
+
+
+
