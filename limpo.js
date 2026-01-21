@@ -15,3 +15,6 @@ function benchQualityChecker(coatingThickness, isHighTraffic) {
 }
 
 console.log(benchQualityChecker(151, true));  // Expected output: "High Quality"
+
+// feito direto no git 
+
