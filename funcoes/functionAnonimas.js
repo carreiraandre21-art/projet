@@ -28,3 +28,9 @@ let multParametro = (function(n1, n2){
 })(a, b); // chamando a funcao e passando os parametros
 
 console.log( multParametro +" com parametro ");  // Expected output: 42
+
+
+let semParametro = (function(){
+    console.log(5 * 2);
+    return 5 * 2;
+})(); // chamando a funcao sem parametros auto executavel
