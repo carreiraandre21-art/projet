@@ -17,4 +17,6 @@ function benchQualityChecker(coatingThickness, isHighTraffic) {
 console.log(benchQualityChecker(151, true));  // Expected output: "High Quality"
 
 // feito direto no git 
+let andre = 10; // feito mo vs
 
+console.log(andre);
