@@ -1,4 +1,4 @@
-const numeros = [1, 5, 10 , 15, 20];
+const numeros = [1, 10 , 15, 20];
 
 ///////////////////////////////////////////////////// add e remove itens do arrey /////////////////////////////////////////////////////
 // adicionando um novo valor no array
@@ -48,4 +48,8 @@ unshift - add no inicio do arrey
 // console.log(numeros);  // [2, 5, 10, 15, 20]
 
 
+numeros.some (n => n < 10) ? console.log("tem numeros menores que 10") : console.log("nao tem numeros menores que 10"); 
+// some - verifica se algum item do arrey satisfaz a condição
+// every - verifica se todos os itens do arrey satisfazem a condição
+// retorna true ou false
 
