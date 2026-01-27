@@ -173,7 +173,7 @@ console.log(false)
 
 }
 
-isValid ("not_user", "pass");*/
+isValid ("not_user", "pass");
 
 let num = 15
 // Type your code below
@@ -202,3 +202,41 @@ let bz = i % 7;
  else console.log(i)
  
 }
+
+function teste () {
+    // Escreva o código aqui
+    let values = [10, 20, 30, 40, 50]
+    for (let i = 0; i < values.length; i++) {
+    console.log(values[i]);
+}
+}
+
+teste(1,2,3);
+
+function values(arr) {
+    // Escreva o código aqui
+
+    for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+
+    }
+}
+values([1, 2, 3, 5]);
+
+function firstAndLast (arr) {
+  
+  let result = arr[0] + arr[arr.length - 1];
+
+  console.log(result);  
+}
+
+firstAndLast([10, 20, 30, 40, 50]);*/
+
+function changeElement(arr, index, newElement) {
+    // Write code here
+    arr[index] = newElement;
+    return arr;
+}
+
+
+console.log (changeElement([1, 2 , 4, 6, 2, 99], 2, 99));

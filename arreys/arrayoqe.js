@@ -31,4 +31,9 @@ console.log(numero.length);  // Expected output: 4
 nomes.push("fernanda"); // adiciona no final do arrey
 console.log(nomes);  // Expected output: ["andre", "joao", "silva", "fernanda"]
 
+//.length - mostra o tamanho do arrey
+
+// de quantos objetos o arrey é composto
+
+
 
