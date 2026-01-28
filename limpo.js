@@ -230,7 +230,7 @@ function firstAndLast (arr) {
   console.log(result);  
 }
 
-firstAndLast([10, 20, 30, 40, 50]);*/
+firstAndLast([10, 20, 30, 40, 50]);
 
 function changeElement(arr, index, newElement) {
     // Write code here
@@ -240,3 +240,32 @@ function changeElement(arr, index, newElement) {
 
 
 console.log (changeElement([1, 2 , 4, 6, 2, 99], 2, 99));
+
+
+let nums = [5, 10, 15];
+let x = nums.pop(); 
+console.log(nums);
+
+let arr = [1, 5, 10, 15];
+
+function swapEnds(arr) {
+    // Write code here
+    let comeco = arr[0];
+    let fim = arr[arr.length - 1]
+    arr[0] = fim;
+    arr[arr.length - 1] = comeco;
+    return arr
+}
+
+console.log(swapEnds(arr));*/ 
+
+let colors = ["red", "blue", "green"];
+
+colors.push("yellow");
+let removedColor = colors.shift();
+colors.unshift("purple");
+let lastColor = colors.pop();
+
+console.log(colors) 
+console.log(removedColor)
+console.log(lastColor)
