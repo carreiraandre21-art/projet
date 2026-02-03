@@ -22,17 +22,19 @@ const numeros = [1, 10 , 15, 20];
  console.log(numeros);  // [1, 5, 10, 15]
 
 
-//////////////////////////////////////////////////////// lista de comandos array /////////////////////////////////////////////////////
-/*
+///////////////////////////////////////////// lista de comandos array /////////////////////////////////////////////////////
 
+/*
 push - add no final do arrey
 pop - remove o ultimo item do arrey
 
 shift - remove o primeiro item do arrey
 unshift - add no inicio do arrey
+*/
 
 
-*/  
+
+
 
 
 // removendo o primeiro item do arrey com shift
