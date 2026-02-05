@@ -261,11 +261,14 @@ console.log(swapEnds(arr));*/
 
 let colors = ["red", "blue", "green"];
 
-colors.push("yellow");
-let removedColor = colors.shift();
-colors.unshift("purple");
-let lastColor = colors.pop();
+colors.push("yellow");  // add no final do arrey
+let removedColor = colors.shift();  // remove o primeiro item do arrey
+colors.unshift("purple"); // add no inicio do arrey
+let lastColor = colors.pop(); // remove o ultimo item do arrey
 
 console.log(colors) 
 console.log(removedColor)
 console.log(lastColor)
+
+removedColor; // "red" 
+//consigo quardar o item removido em uma variavel

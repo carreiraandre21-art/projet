@@ -50,7 +50,9 @@ unshift - add no inicio do arrey
 // console.log(numeros);  // [2, 5, 10, 15, 20]
 
 
-numeros.some (n => n < 20) ? console.log("tem numeros menores que 20") : console.log("nao tem numeros menores que 20"); 
+//numeros.some (n => n < 20) ? console.log("tem numeros menores que 20") : console.log("nao tem numeros menores que 20"); // some - verifica se algum item do arrey satisfaz a condição
+
+//           
 
 // some - verifica se algum item do arrey satisfaz a condição
 // every - verifica se todos os itens do arrey satisfazem a condição
@@ -67,3 +69,11 @@ console.log(c);
 
 let f = numeros.pop();  //e pop() mostra o valor do final do arrey
 console.log(f);
+
+
+console.log(numeros); //mostra o valor da posicao 0 do arrey 
+
+
+numeros.shift(2)
+
+console.log(numeros)
