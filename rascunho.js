@@ -257,7 +257,7 @@ function swapEnds(arr) {
     return arr
 }
 
-console.log(swapEnds(arr));*/ 
+console.log(swapEnds(arr));
 
 let colors = ["red", "blue", "green"];
 
@@ -271,4 +271,10 @@ console.log(removedColor)
 console.log(lastColor)
 
 removedColor; // "red" 
-//consigo quardar o item removido em uma variavel
+//consigo quardar o item removido em uma variavel*/ 
+
+const spliceTeste = [1 , 2 , 3 , 4 , 5];
+
+spliceTeste.splice(3 , 2 );
+
+console.log(spliceTeste)
