@@ -12,9 +12,14 @@ Demonstrar minha evolução em lógica de programação, novas linguagens e ferr
 
 
 ## 📂 Organização do Repositório
-- `/Exercicios`: Desafios de lógica e algoritmos.
+- `/ 1 e 2 `: São a ordem dos cursos
+- `/Praticas e desafios`: Desafios de lógica e algoritmos que fazia sozinho para firmar
 - `/Projetos`: Pequenas aplicações e sites que desenvolvi.
-- `/Anotacoes`: Resumos de cursos e videoaulas.
+- `/Rascunho`: Resumos de cursos e videoaulas.
+- `/CoddyTech` : Site de estudo na pratica 
+
+- Perfil : https://coddy.tech/user/6ULZCaGrlbUz1vLH6QPdPdN4ksH2
+
 
 ## ✉️ Contato
 - LinkedIn: www.linkedin.com/in/andre-carreira-18338a391
