@@ -271,10 +271,191 @@ console.log(removedColor)
 console.log(lastColor)
 
 removedColor; // "red" 
-//consigo quardar o item removido em uma variavel*/ 
+//consigo quardar o item removido em uma variavel*
 
 const spliceTeste = [1 , 2 , 3 , 4 , 5];
 
 spliceTeste.splice(3 , 2 );
 
-console.log(spliceTeste)
+console.log(spliceTeste) 
+
+let arr = [1, 2, 3, 4, 5];
+let num = 3
+
+function findElement(arr, num) {
+    // Write code here
+    let varificador = arr.includes(num);
+    let index = arr.indexOf(num);
+
+    if (varificador == true ) {
+       return (index);
+    }
+    else return index;
+
+
+}
+
+console.log(findElement(arr, 5));
+
+let numbers = [40, 10, 30, 20, 50, 30, 10];
+
+let hasHundred;
+
+
+numbers.sort();
+numbers.reverse();
+
+let a = numbers.indexOf(30);
+let b = numbers.lastIndexOf(10);
+
+let c = numbers.includes(100);
+    
+
+
+console.log(numbers)
+console.log(a)
+console.log(b)  
+console.log(c)
+
+
+ 
+ 
+//(1)
+function saudacoes ( nome ) {
+    return (`Olá, ${nome}! Bem-vindo(a)!`);
+}
+
+console.log(saudacoes("André"))
+
+//(2)
+function media (n1 , n2, n3) {
+    let media = (n1 + n2 + n3) / 3;
+
+    return media >= 7 ? media + " Aprovado" : media + " Reprovado";
+
+}
+
+console.log(media(7, 8, 9))
+
+//(3 )
+let dobro;
+
+dobro = (num) => num * 2;
+console.log(dobro(15))
+
+//(4)
+
+//Metodos String
+
+let nome = "  andre carreira  "
+let semEnome = nome.trim(); // "andre carreira"
+console.log(semEnome.length) // 
+console.log(semEnome.toUpperCase()) // "  ANDRE CARREIRA  " 
+
+//(5)   
+
+let numeros = [2, 5, 8, 10, 3];
+
+let maior = numeros.filter(num => num > 5); // [8, 10]
+let filtro = maior.map(num => num * 2); // [16, 20]
+let soma = filtro.reduce((acc, num) => acc + num, 0); // 36
+console.log(soma) // 36
+
+// podemos encadear os metodos
+
+const resultado = numeros
+    .filter(num => num > 5) // [8, 10]
+    .map(num => num * 2) // [16, 20]
+    .reduce((acc, num) => acc + num, 0); // 36
+
+console.log(resultado) // 36
+
+//(6)
+
+let alunos = [
+  { nome: "João", nota: 8 },
+  { nome: "Maria", nota: 6 },
+  { nome: "Pedro", nota: 9 }
+];
+
+let alunosAprovados = alunos
+    .filter(alunos => alunos.nota >= 7) // [{ nome: "João", nota: 8 }, { nome: "Pedro", nota: 9 }]
+    .map(alunos => alunos.nome); // ["João", "Pedro"]
+
+    console.log(alunosAprovados) // ["João", "Pedro"]
+
+// (7) 
+
+function contador (num) {
+    for (let i = 0; i <= num ; i++) {
+        console.log(i);
+    }
+}
+
+contador(6);
+
+//(8) 
+
+function leitor (num) {
+
+    if (num % 2 === 0) {
+        console.log( num + " é Par");
+    }
+    else console.log(num + " é Impar");
+}
+
+leitor(3);
+
+// (9) 
+
+function contaPalavras (frase) {
+    let palavras = frase
+    .trim()  // Remove espaços extras
+    .split(/\s+/); //  divide a frase em palavras
+
+    return palavras.length; // Retorna o número de palavras
+}
+
+console.log(contaPalavras("Olá, como vai você?")) // 4
+
+// (10) 
+
+let produtos = [
+  { nome: "Produto A", preco: 150, categoria: "Eletrônicos" },
+  { nome: "Produto B", preco: 80, categoria: "Roupas" }
+];
+
+
+function cadastrarProduto(nome, preco, categoria) {
+  produtos.push({ nome, preco, categoria });
+}
+
+function calcularTotalProdutosCaros() {
+  let produtosCaros = produtos.filter(produto => produto.preco > 100);
+
+  return produtosCaros.reduce((acc, produto) => acc + produto.preco, 0);
+}
+
+cadastrarProduto("Produto C", 200, "Eletrodomésticos");
+
+console.log(calcularTotalProdutosCaros()); 
+// 150 + 200 = 350 
+
+function processArray(arr) {
+  // Write code here
+    arr.pop()
+    arr.push(10);
+    
+    if (arr.includes(5)) {
+        let pos = arr.indexOf(5)
+        arr.splice(pos , 1, 50);
+    }
+
+    arr.reverse();
+
+return arr;
+}
+
+
+console.log(processArray([9, 6, 3, 12])); */
+
