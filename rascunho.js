@@ -459,3 +459,8 @@ return arr;
 
 console.log(processArray([9, 6, 3, 12])); */
 
+const nomes = ['João', 'Maria', 'Pedro', 'Ana', 'André', 'Carlos', 'Mariana', 'Julia', 'Fernanda', 'Gabriel', 'Luana'];
+
+nomes.forEach(function (nomes) {
+    console.log(`sejam bem vindos aluno(a) ${nomes}`)
+})
