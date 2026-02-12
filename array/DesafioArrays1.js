@@ -1,4 +1,4 @@
-/*
+
 // cargos da empresa 
 
 const cargos = ["FULLSTACK", "FRONTEND", "BACKEND", "DEVOPS", "QA", "UXUI", "DATA_SCIENCE", "MOBILE", "SECURITY", "CLOUD"];
@@ -6,17 +6,15 @@ const cargos = ["FULLSTACK", "FRONTEND", "BACKEND", "DEVOPS", "QA", "UXUI", "DAT
 if (cargos.includes("BACKEND")) {
 
     let index = cargos.indexOf("BACKEND");
-    let adcCargo = "TI";
 
     cargos.splice(index, 1 );
 
-
-    console.log(cargos);
+    console.log(cargos.join( " - ")); 
 }
-else console.log(cargos.join(" - "));
-*/
+else console.log(cargos);
 
-/*
+
+
 // procura na lista de nomes 
 
 const nomes = ["Alice", "Bob", "Charlie", "Henrique", "David", "Eve", "Frank", "Grace", "Heidi", "Ivan", "Judy", "Henrique"];
@@ -35,10 +33,8 @@ const numeros = [10, 20, 3, 24, 5];
 let soma = 0;
 
 
-numeros.forEach 
-(
-        function(numero) 
-        { 
+numeros.forEach (
+        function(numero)  { 
             soma += numero;
         }
 )
@@ -85,7 +81,7 @@ multiplos.forEach
 console.log(array.join(" - ") + " é múltiplo de 3");
 console.log(errados.join(" - ") + " não é múltiplo de 3");
 
-*/ 
+
 
 
 // fitrar tamanhos de palavras com mais de 5 letras'

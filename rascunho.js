@@ -460,7 +460,44 @@ return arr;
 console.log(processArray([9, 6, 3, 12])); */
 
 const nomes = ['João', 'Maria', 'Pedro', 'Ana', 'André', 'Carlos', 'Mariana', 'Julia', 'Fernanda', 'Gabriel', 'Luana'];
-
+/*
 nomes.forEach(function (nomes) {
     console.log(`sejam bem vindos aluno(a) ${nomes}`)
+})
+    
+
+let nomeProcurado = "   André   ";
+
+if(nomes.includes(nomeProcurado.trim())) {
+
+console.log(`O Nome ${nomeProcurado.trim()} estava na posicao ${nomes.indexOf(nomeProcurado.trim()) + 1}`);
+
+console.log(`O nome foi removido da lista`)
+
+nomes.splice( nomes.indexOf(nomeProcurado.trim()), 1);
+
+console.log(nomes.join(" - "));
+
+
+}
+
+else 
+console.log("O nome não está na lista");
+
+
+let colors = ["red", "green", "blue"];
+colors.forEach((color) => {
+    console.log(color);
+})
+
+*/
+const arr = ["apple", "banana", "cherry", "date", "elderberry"];
+
+let resultado = arr.filter((nomes) => nomes.length > 5);
+
+console.log(resultado)
+
+
+arr.forEach(( nomes, posicao ) => {
+    console.log(`Posição ${posicao + 1}: ${nomes}`);
 })
