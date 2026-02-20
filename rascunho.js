@@ -457,10 +457,10 @@ return arr;
 }
 
 
-console.log(processArray([9, 6, 3, 12])); */
+console.log(processArray([9, 6, 3, 12])); 
 
 const nomes = ['João', 'Maria', 'Pedro', 'Ana', 'André', 'Carlos', 'Mariana', 'Julia', 'Fernanda', 'Gabriel', 'Luana'];
-/*
+
 nomes.forEach(function (nomes) {
     console.log(`sejam bem vindos aluno(a) ${nomes}`)
 })
@@ -490,7 +490,7 @@ colors.forEach((color) => {
     console.log(color);
 })
 
-*/
+
 const arr = ["apple", "banana", "cherry", "date", "elderberry"];
 
 let resultado = arr.filter((nomes) => nomes.length > 5);
@@ -501,3 +501,161 @@ console.log(resultado)
 arr.forEach(( nomes, posicao ) => {
     console.log(`Posição ${posicao + 1}: ${nomes}`);
 })
+    
+
+const arr = [23, 432, 213, 1234, 5555];
+
+let div = [];
+
+arr.forEach ( (Number) => {
+   
+   if (Number < 50 || Number % 5 === 0 ) {
+    div.push(Number);
+   }
+
+})
+
+console.log(div)
+
+
+const text = "hello";
+
+for (const a of text ) {
+    console.log(a);
+}
+
+let nome = " André";
+
+for ( const nomes of nome ) {
+    console.log(nomes);
+}
+
+
+
+
+function countVowels(str) {
+    // Write code here
+
+let vz = 0;
+
+    for ( let aei of str) {
+
+        if (aei == "a" || aei == "A" || aei == "e" || aei   == "E" || aei == "i" ||
+         aei == "I" || aei == "o" || aei == "O" || aei == "u" || aei == "U") {
+            vz++;
+        }
+    }
+    return vz;
+}
+
+console.log(countVowels("John doe")); // Expected output: 3
+
+
+
+function numcountDigitseros ( string ) {
+let count = 0;
+
+    for (let n of string) {
+        if (n == "0" || n == "1" || n == "2" || n == "3" || n == "4" || n == "5" || n == "6" || n == "7" || n == "8" || n == "9") {
+        count++;
+        }
+
+
+    }
+    return count;
+}
+
+console.log(numcountDigitseros("abc123def456")); // Expected output: 6
+
+
+
+
+
+
+Crie um programa que recebe uma string como entrada (given), e imprime quantas vezes o caractere p aparece na string.
+
+Alguns caracteres podem estar em maiúscula, use char.toLowerCase() para convertê-los para minúscula.
+
+
+
+function p (text) {
+
+let contadorDeP = 0;
+
+    for (let i of text.toLowerCase()) {
+        if (i === "p" ) {
+            contadorDeP++;
+        }
+
+
+    }
+    return contadorDeP;
+}
+
+console.log(p("ai pai paraa")); //2
+
+
+let arr = [9, 6, 3, 12];
+
+const a = arr.slice( 1, 2 );
+
+console.log(a);
+
+
+let cpAr = arr.slice( 2, 4);
+let ac = cpAr.join(" ").split(" ").map( (item) => item.trim() );
+
+console.log(cpAr)
+console.log(ac) 
+
+
+
+
+let cpf = "123.456.789-00";
+
+cpf = cpf.split(".").join("");
+cpf = cpf.split("-").join("");
+
+console.log(cpf) // "12345678900"
+
+const obg = {
+nome: "André",
+sobrenome: "Carreira"   ,
+idade: 30,
+cidade: "São Paulo"
+
+}
+
+console.log(obg.sobrenome)
+
+
+
+const obg = {
+nome: "André",
+sobrenome: "Carreira"   ,
+idade: 30,
+cidade: "São Paulo"
+
+}
+
+for ( nome in obg ) {
+    console.log(nome + " : " + obg[nome])
+}
+    */
+
+
+function ContarVogal (str) {
+
+let vz = 0;
+
+    for ( let aei of str) { 
+        if (aei == "a" || aei == "A" || aei == "e" || aei   == "E" || aei == "i" ||
+            aei == "I" || aei == "o" || aei == "O" || aei == "u" || aei == "U") 
+            {    // quando tiver uma vogal, o contador de vogais vai aumentar em 1
+            vz++;
+        }
+    }
+    return vz;
+}   
+
+console.log(ContarVogal("John doe")); // Expected output: 3
