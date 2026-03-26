@@ -641,7 +641,7 @@ cidade: "São Paulo"
 for ( nome in obg ) {
     console.log(nome + " : " + obg[nome])
 }
-    */
+    
 
 
 function ContarVogal (str) {
@@ -659,3 +659,119 @@ let vz = 0;
 }   
 
 console.log(ContarVogal("John doe")); // Expected output: 3
+
+
+
+const array = { 
+    nomes: [ `Andre, Fernanda, Mariana, Julia, Luana, Lista` ],
+};
+
+let lista = array.nomes[0].split(", ").map( (item) => item.trim() );
+
+ 
+
+
+
+
+function procurarNome(nomes, nomeProcurado) {
+
+    let index = nomes.indexOf(nomeProcurado.trim());
+
+    if (index !== -1 && nomeProcurado.trim() !== "Lista") {
+
+        return `Encontrado "${nomeProcurado.trim()}" na posição ${index + 1}`;
+    }
+
+    if (nomeProcurado.trim() === "Lista") {
+
+        return array.nomes[0].split(", ").map( (item) => item.trim() ).join(" - ");
+    }
+
+    else {
+
+        return "O nome não está na lista";
+    }   
+
+}
+
+
+console.log(procurarNome(lista, "Lucia"));
+
+
+//.map( (item) => item.trim() ) -> para remover os espaços em branco antes e depois dos nomes
+
+
+
+const array = { 
+    ar: [ 10, 20, 30, 40, ],
+};
+
+
+function fatiarArray(arr) {
+
+  const tamanho = arr.length;
+  const meio = Math.floor(tamanho / 2);
+
+  if (tamanho % 2 === 0) {
+    return arr.slice(meio - 1, meio + 1);
+  }
+  
+   else {
+    return arr.slice(meio - 1, meio + 2);
+  }
+}
+
+console.log(fatiarArray(array.ar)); // Expected output: [20, 30]
+
+
+let numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45];
+
+let numero = numbers.indexOf(15);
+let fim = numbers.indexOf(35);
+
+if ( numero >= 0) {
+
+let result = numbers.slice(numero, fim + 1)
+console.log(result)
+
+}
+else {
+    console.log("nao tem ")
+}
+
+
+
+const { ConsoleLogWriter } = require("drizzle-orm");
+
+// o forEach 
+
+const array = [6 , 12 , 5, 9, 14, 27];
+const multiplos3 = [];
+
+
+array.forEach( (num) =>  {
+
+    if (num % 3 === 0) {
+        multiplos3.push(num)
+    }
+
+})
+        
+console.log(`numeros multiplos de (3) = ${multiplos3.join("-")}`);
+*/
+
+const nome = ["gato" , "cachorro", "morango" , "larva"] ; 
+
+let palavra5 = [];
+
+    nome.map( (nome) => nome > 5 ? palavra5.push(nome) : null )
+    
+    console.log(nome)
+
+
+
+
+
+
+
+console.log(`apenas as palavras ${palavra5} tem mais de 5 letras` );
