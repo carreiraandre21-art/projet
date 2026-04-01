@@ -758,20 +758,40 @@ array.forEach( (num) =>  {
 })
         
 console.log(`numeros multiplos de (3) = ${multiplos3.join("-")}`);
-*/
 
-const nome = ["gato" , "cachorro", "morango" , "larva"] ; 
+
+const nome = ["gato" , "oleo", "morango" , "PARALELEPIPEDO", "manteiga"] ; 
 
 let palavra5 = [];
+let resto = [];
 
-    nome.map( (nome) => nome > 5 ? palavra5.push(nome) : null )
-    
-    console.log(nome)
-
-
+    nome.map( (nome) => 
+        nome.length >= 5 ? palavra5.push(nome) : resto.push(nome) );
 
 
+        if (resto.length  === 1 ) {
+            console.log(`apenas as palavras : ${resto.join(" e ")} tem MENOS de 5 letras` );
+        }
+        else 
+            console.log(`apenas as palavras : ${palavra5.join(" e ")} tem MAIS de 5 letras` );
 
 
+*/
 
-console.log(`apenas as palavras ${palavra5} tem mais de 5 letras` );
+
+const colaborador = {
+    nome: "André",
+    cargo: "Estagio",
+    horasTrabalhadas: 160, // Total no mês
+    metaBatida: true
+}
+
+
+function calcularSalarioFinal (nome, cargo, valor) {
+
+    console.log(`O colaborador ${nome} (${cargo}) recebera esse mes o valor de : ${valor}`)
+
+}
+
+let resp = calcularSalarioFinal(colaborador.map())
+
