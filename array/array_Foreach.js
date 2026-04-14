@@ -20,3 +20,4 @@ Alunos.forEach(function () {
     console.log("Olá, alunos!") // aqui ele vai imprimir "Olá, alunos!" para cada elemento do array, ou seja, 4 vezes
 })
 
+

@@ -643,7 +643,7 @@ for ( nome in obg ) {
 }
     */
 
-
+/*
 function ContarVogal (str) {
 
 let vz = 0;
@@ -658,4 +658,117 @@ let vz = 0;
     return vz;
 }   
 
-console.log(ContarVogal("John doe")); // Expected output: 3
+
+console.log(ContarVogal("NATAIANE")); // Expected output: 3
+
+
+
+
+let produtos = [
+    
+  { nome: "Produto A", 
+    preco: 150,
+     categoria: "Eletrônicos" },
+
+  {  nome:"Produto B", 
+     preco: 80,
+     categoria: "Roupas" }
+];
+
+
+function cadastrarProduto(nome, preco, categoria) {
+  produtos.push({ nome, preco, categoria });
+}
+
+cadastrarProduto("Calca jeans", 120 , "roupa");
+cadastrarProduto("Jaqueta" , 159 , "Masculina")
+
+console.log(produtos)
+
+function calcularTotalProdutosCaros() {
+  let produtosCaros = produtos.filter(produto => produto.preco > 100);
+
+  return produtosCaros.reduce((acc, produto) => acc + produto.preco, 0);
+}
+
+cadastrarProduto("Produto C", 200, "Eletrodomésticos");
+
+console.log(calcularTotalProdutosCaros()); 
+// 150 + 200 = 350 
+
+function processArray(arr) {
+  // Write code here
+    arr.pop()
+    arr.push(10);
+    
+    if (arr.includes(5)) {
+        let pos = arr.indexOf(5)
+        arr.splice(pos , 1, 50);
+    }
+
+    arr.reverse();
+
+return arr;
+}
+
+
+console.log(processArray([9, 6, 3, 12])); 
+
+const nomes = ['João', 'Maria', 'Pedro', 'Ana', 'André', 'Carlos', 'Mariana', 'Julia', 'Fernanda', 'Gabriel', 'Luana'];
+
+nomes.forEach(function (nomes) {
+    console.log(`sejam bem vindos aluno(a) ${nomes}`)
+})
+    
+
+let nomeProcurado = "   André   ";
+
+if(nomes.includes(nomeProcurado.trim())) {
+
+console.log(`O Nome ${nomeProcurado.trim()} estava na posicao ${nomes.indexOf(nomeProcurado.trim()) + 1}`);
+}
+
+console.log(`O nome foi removido da lista`)
+
+nomes.splice( nomes.indexOf(nomeProcurado.trim()), 1);
+
+console.log(nomes.join(" - "));
+
+
+const nomes = ['João', 'Maria', 'Pedro', 'Ana', 'André', 'Carlos', 'Mariana', 'Julia', 'Fernanda', 'Gabriel', 'Luana'];
+
+console.log(nomes.join(" - "));
+
+let nomee = "   André   ";
+
+nomes.splice( nomes.indexOf(nomee.trim()), 1, "Loiro" );
+
+console.log(nomes.join(" - "));
+
+
+const arr = [10, 20, 30, 40, 50];
+
+let a = arr.slice(1, 4);
+
+console.log(a)
+*/
+
+let numbers = [1, 2, 3, 4, 5];
+
+let numero = [6, 7 , 8];
+
+let juntos = numbers.concat(numero);
+console.log(juntos)
+
+let a = juntos.join(",")
+console.log(a)
+
+let b = numbers.slice(0 , 3)
+console.log(b)
+
+numbers.splice(1 , 1 , 99)
+console.log(numbers)
+
+
+
+
