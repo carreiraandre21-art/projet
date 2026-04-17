@@ -641,7 +641,7 @@ cidade: "São Paulo"
 for ( nome in obg ) {
     console.log(nome + " : " + obg[nome])
 }
-    */
+    
 
 /*
 function ContarVogal (str) {
@@ -660,202 +660,146 @@ let vz = 0;
 
 
 console.log(ContarVogal("NATAIANE")); // Expected output: 3
+console.log(ContarVogal("John doe")); // Expected output: 3
+
+
+
+const array = { 
+    nomes: [ `Andre, Fernanda, Mariana, Julia, Luana, Lista` ],
+};
+
+let lista = array.nomes[0].split(", ").map( (item) => item.trim() );
+
+ 
 
 
 
 
-let produtos = [
-    
-  { nome: "Produto A", 
-    preco: 150,
-     categoria: "Eletrônicos" },
+function procurarNome(nomes, nomeProcurado) {
 
-  {  nome:"Produto B", 
-     preco: 80,
-     categoria: "Roupas" }
-];
+    let index = nomes.indexOf(nomeProcurado.trim());
 
+    if (index !== -1 && nomeProcurado.trim() !== "Lista") {
 
-function cadastrarProduto(nome, preco, categoria) {
-  produtos.push({ nome, preco, categoria });
-}
-
-cadastrarProduto("Calca jeans", 120 , "roupa");
-cadastrarProduto("Jaqueta" , 159 , "Masculina")
-
-console.log(produtos)
-
-function calcularTotalProdutosCaros() {
-  let produtosCaros = produtos.filter(produto => produto.preco > 100);
-
-  return produtosCaros.reduce((acc, produto) => acc + produto.preco, 0);
-}
-
-cadastrarProduto("Produto C", 200, "Eletrodomésticos");
-
-console.log(calcularTotalProdutosCaros()); 
-// 150 + 200 = 350 
-
-function processArray(arr) {
-  // Write code here
-    arr.pop()
-    arr.push(10);
-    
-    if (arr.includes(5)) {
-        let pos = arr.indexOf(5)
-        arr.splice(pos , 1, 50);
+        return `Encontrado "${nomeProcurado.trim()}" na posição ${index + 1}`;
     }
 
-    arr.reverse();
+    if (nomeProcurado.trim() === "Lista") {
 
-return arr;
+        return array.nomes[0].split(", ").map( (item) => item.trim() ).join(" - ");
+    }
+
+    else {
+
+        return "O nome não está na lista";
+    }   
+
 }
 
 
-console.log(processArray([9, 6, 3, 12])); 
+console.log(procurarNome(lista, "Lucia"));
 
-const nomes = ['João', 'Maria', 'Pedro', 'Ana', 'André', 'Carlos', 'Mariana', 'Julia', 'Fernanda', 'Gabriel', 'Luana'];
 
-nomes.forEach(function (nomes) {
-    console.log(`sejam bem vindos aluno(a) ${nomes}`)
+//.map( (item) => item.trim() ) -> para remover os espaços em branco antes e depois dos nomes
+
+
+
+const array = { 
+    ar: [ 10, 20, 30, 40, ],
+};
+
+
+function fatiarArray(arr) {
+
+  const tamanho = arr.length;
+  const meio = Math.floor(tamanho / 2);
+
+  if (tamanho % 2 === 0) {
+    return arr.slice(meio - 1, meio + 1);
+  }
+  
+   else {
+    return arr.slice(meio - 1, meio + 2);
+  }
+}
+
+console.log(fatiarArray(array.ar)); // Expected output: [20, 30]
+
+
+let numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45];
+
+let numero = numbers.indexOf(15);
+let fim = numbers.indexOf(35);
+
+if ( numero >= 0) {
+
+let result = numbers.slice(numero, fim + 1)
+console.log(result)
+
+}
+else {
+    console.log("nao tem ")
+}
+
+
+
+
+const array = [6 , 12 , 5, 9, 14, 27];
+const multiplos3 = [];
+
+
+array.forEach( (num) =>  {
+
+    if (num % 3 === 0) {
+        multiplos3.push(num)
+    }
+
 })
-    
-
-let nomeProcurado = "   André   ";
-
-if(nomes.includes(nomeProcurado.trim())) {
-
-console.log(`O Nome ${nomeProcurado.trim()} estava na posicao ${nomes.indexOf(nomeProcurado.trim()) + 1}`);
-}
-
-console.log(`O nome foi removido da lista`)
-
-nomes.splice( nomes.indexOf(nomeProcurado.trim()), 1);
-
-console.log(nomes.join(" - "));
+        
+console.log(`numeros multiplos de (3) = ${multiplos3.join("-")}`);
 
 
-const nomes = ['João', 'Maria', 'Pedro', 'Ana', 'André', 'Carlos', 'Mariana', 'Julia', 'Fernanda', 'Gabriel', 'Luana'];
+const nome = ["gato" , "oleo", "morango" , "PARALELEPIPEDO", "manteiga"] ; 
 
-console.log(nomes.join(" - "));
+let palavra5 = [];
+let resto = [];
 
-let nomee = "   André   ";
-
-nomes.splice( nomes.indexOf(nomee.trim()), 1, "Loiro" );
-
-console.log(nomes.join(" - "));
+    nome.map( (nome) => 
+        nome.length >= 5 ? palavra5.push(nome) : resto.push(nome) );
 
 
-const arr = [10, 20, 30, 40, 50];
-
-let a = arr.slice(1, 4);
-
-console.log(a)
-
-let numbers = [1, 2, 3, 4, 5];
-
-let numero = [6, 7 , 8];
-
-let juntos = numbers.concat(numero);
-console.log(juntos)
-
-let a = juntos.join(",")
-console.log(a)
-
-let b = numbers.slice(0 , 3)
-console.log(b)
-
-numbers.splice(1 , 1 , 99)
-console.log(numbers)
+        if (resto.length  === 1 ) {
+            console.log(`apenas as palavras : ${resto.join(" e ")} tem MENOS de 5 letras` );
+        }
+        else 
+            console.log(`apenas as palavras : ${palavra5.join(" e ")} tem MAIS de 5 letras` );
 
 
-
-
-let numbers = [1, 2, 3, 4, 5];
-
-let resul = numbers.map( n => n * 3 )
-
-let resul2 = numbers.filter(n => n > 3)
-
-console.log(resul2)
-console.log(resul)
 */
 
-class Loja {
-    constructor(nome) {
-        this.nome = nome;
-        this.produtos = [];
-        this.formatador = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-    }
 
-    adicionarProduto(nome, preco, categoria, estoque) {
-        const novoProduto = {
-            id: Math.random().toString(36).substr(2, 9),
-            nome,
-            preco,
-            categoria,
-            estoque
-        };
-        this.produtos.push(novoProduto);
-        console.log(`[LOG] Produto "${nome}" adicionado com sucesso.`);
-    }
-
-    // Aplica desconto baseado na categoria (Substitui o excesso de SWITCH)
-    gerarRelatorioComDesconto(percentual, categoriaAlvo) {
-        console.log(`\n--- RELATÓRIO DE BLACK FRIDAY: ${this.nome.toUpperCase()} ---`);
-        
-        const produtosProcessados = this.produtos
-            .filter(p => p.categoria === categoriaAlvo)
-            .map(p => {
-                const valorDesconto = (p.preco * percentual) / 100;
-                return {
-                    ...p,
-                    precoFinal: p.preco - valorDesconto,
-                    economizado: valorDesconto
-                };
-            });
-
-        if (produtosProcessados.length === 0) {
-            console.log(`Nenhum produto encontrado na categoria: ${categoriaAlvo}`);
-            return;
-        }
-
-        produtosProcessados.forEach(p => {
-            console.log(`${p.nome} (${p.categoria}):`);
-            console.log(`  > De: ${this.formatador.format(p.preco)}`);
-            console.log(`  > Por: ${this.formatador.format(p.precoFinal)} (Economia de ${this.formatador.format(p.economizado)})`);
-        });
-
-        const valorTotalEstoque = produtosProcessados.reduce((acc, p) => acc + (p.precoFinal * p.estoque), 0);
-        console.log(`\nValor total estimado em estoque (com desconto): ${this.formatador.format(valorTotalEstoque)}`);
-    }
-
-    
-    buscarPorNome(termo) {
-        return this.produtos.find(p => p.nome.toLowerCase().includes(termo.toLowerCase()));
-    }
+const colaborador = {
+    nome: "André",
+    cargo: "Assistente",
+    horasTrabalhadas: 160, // Total no mês
+    valorHr: 20,
+    metaBatida: true
 }
 
-// --- TESTANDO O POTENCIAL DO SISTEMA ---
 
-const minhaLoja = new Loja("Carreira Wear");
+function calcularSalarioFinal (nome, cargo, hr, valorHr = 20, metaBatida = true) {
 
-try {
-    minhaLoja.adicionarProduto("Camiseta Oversized", 89.90, "Camisetas", 50);
-    minhaLoja.adicionarProduto("Calça Cargo Black", 159.90, "Calças", 30);
-    minhaLoja.adicionarProduto("Tênis Street", 299.99, "Calçados", 15);
-    minhaLoja.adicionarProduto("Camiseta Básica Cotton", 45.00, "Camisetas", 100);
+    console.log("O colaborador " + nome + " (" + cargo + ") recebera esse mes o valor de : " + hr * valorHr + " reais" )
 
-    // Aplicando 20% de desconto apenas em Camisetas
-    minhaLoja.gerarRelatorioComDesconto(20, "Camisetas");
-
-    // Busca rápida
-    const busca = minhaLoja.buscarPorNome("Cargo");
-    if (busca) {
-        console.log(`\nBusca encontrada: ${busca.nome} custa ${minhaLoja.formatador.format(busca.preco)}`);
+    if (metaBatida) {
+        console.log("Parabens por bater a meta, voce recebera um bonus de 10% do valor total do salario");
+        let valor = (hr * valorHr) * 1.10;
+        return "Valor final com bonus: " + valor.toFixed(2) + " reais";
     }
 
-} catch (error) {
-    console.error("Erro no processamento da loja:", error.message);
 }
+
+let resp = calcularSalarioFinal(colaborador.nome, colaborador.cargo, colaborador.horasTrabalhadas);
+
+console.log(resp)
 
