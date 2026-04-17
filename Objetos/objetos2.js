@@ -21,12 +21,8 @@ const calculos = {
     }
 }
 
-console.log(calculos.soma(1, 5))
-console.log(calculos.subtrair(1, 5))
-
 let a = calculos.soma(1, 5);
-let b = calculos.subtrair(1, 5)
+let b = calculos.subtrair(1, 5);
 
-console.log(a)
-
-console.log(b)
+console.log(`Resultado da subtração: ${b}`);
+console.log(`Resultado da soma: ${a}`);

@@ -781,17 +781,26 @@ let resto = [];
 
 const colaborador = {
     nome: "André",
-    cargo: "Estagio",
+    cargo: "Assistente",
     horasTrabalhadas: 160, // Total no mês
+    valorHr: 20,
     metaBatida: true
 }
 
 
-function calcularSalarioFinal (nome, cargo, valor) {
+function calcularSalarioFinal (nome, cargo, hr, valorHr = 20, metaBatida = true) {
 
-    console.log(`O colaborador ${nome} (${cargo}) recebera esse mes o valor de : ${valor}`)
+    console.log("O colaborador " + nome + " (" + cargo + ") recebera esse mes o valor de : " + hr * valorHr + " reais" )
+
+    if (metaBatida) {
+        console.log("Parabens por bater a meta, voce recebera um bonus de 10% do valor total do salario");
+        let valor = (hr * valorHr) * 1.10;
+        return "Valor final com bonus: " + valor.toFixed(2) + " reais";
+    }
 
 }
 
-let resp = calcularSalarioFinal(colaborador.map())
+let resp = calcularSalarioFinal(colaborador.nome, colaborador.cargo, colaborador.horasTrabalhadas);
+
+console.log(resp)
 
