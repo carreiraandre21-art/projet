@@ -643,7 +643,7 @@ for ( nome in obg ) {
 }
     
 
-
+/*
 function ContarVogal (str) {
 
 let vz = 0;
@@ -658,6 +658,8 @@ let vz = 0;
     return vz;
 }   
 
+
+console.log(ContarVogal("NATAIANE")); // Expected output: 3
 console.log(ContarVogal("John doe")); // Expected output: 3
 
 
@@ -741,9 +743,6 @@ else {
 
 
 
-const { ConsoleLogWriter } = require("drizzle-orm");
-
-// o forEach 
 
 const array = [6 , 12 , 5, 9, 14, 27];
 const multiplos3 = [];
