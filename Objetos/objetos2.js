@@ -12,14 +12,7 @@ const pessoa = {
 //pessoa.saudacao();
 
 
-const calculos = {
-    soma: function (numero1, numero2) {
-        return numero1 + numero2;
-    },
-    subtrair: function (numero1, numero2){
-        return numero1 - numero2;
-    }
-}
+467151
 
 let a = calculos.soma(1, 5);
 let b = calculos.subtrair(1, 5);
