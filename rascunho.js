@@ -775,7 +775,7 @@ let resto = [];
             console.log(`apenas as palavras : ${palavra5.join(" e ")} tem MAIS de 5 letras` );
 
 
-*/
+
 
 
 const colaborador = {
@@ -802,4 +802,13 @@ function calcularSalarioFinal (nome, cargo, hr, valorHr = 20, metaBatida = true)
 let resp = calcularSalarioFinal(colaborador.nome, colaborador.cargo, colaborador.horasTrabalhadas);
 
 console.log(resp)
+*/
 
+let arr = [10, 15, 20, 25]
+
+function transformArray (arr) {
+    let a = arr.filter(item => item >= 10).map(item => item * 2);
+    return a;
+}
+
+console.log(transformArray(arr));

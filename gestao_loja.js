@@ -18,6 +18,7 @@ class Loja {
             categoria,
             estoque
         };
+        
         this.produtos.push(novoProduto);
         console.log(`[LOG] Produto "${nome}" adicionado com sucesso.`);
     }
