@@ -802,7 +802,7 @@ function calcularSalarioFinal (nome, cargo, hr, valorHr = 20, metaBatida = true)
 let resp = calcularSalarioFinal(colaborador.nome, colaborador.cargo, colaborador.horasTrabalhadas);
 
 console.log(resp)
-*/
+
 
 let arr = [10, 15, 20, 25]
 
@@ -812,3 +812,31 @@ function transformArray (arr) {
 }
 
 console.log(transformArray(arr));
+*/
+
+let text = "Starfish are amazing! I've never seen a starfish before. Did you know that STARFISH can regenerate limbs? Oh look, a starryfish swims by."
+
+function countStarfish(text) {
+  const lowercaseText = text.toLowerCase();
+  const words = lowercaseText.split(/\s+/);
+  
+  let total = 0;
+  let standalone = 0;
+  
+  for (const word of words) {
+    if (word === "starfish") {
+      standalone++;
+      total++;
+    } else if (word.includes("starfish")) {
+      total++;
+    }
+  }
+  
+  return {
+    total,
+    standalone
+  };
+}
+
+const result = countStarfish(text);
+console.log(result);
